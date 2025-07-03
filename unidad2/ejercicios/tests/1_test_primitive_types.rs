@@ -65,9 +65,11 @@ mod tests {
         // 3. Declara una variable 'big_number' de tipo i64 con un valor grande (ej: 1_000_000_000).
         // Nota: Los guiones bajos `_` se pueden usar para mejorar la legibilidad de números grandes.
         let big_number: i64 = 1_000_000_000;
+        assert_eq!(big_number, 1_000_000_000);
 
         // 4. Suma 'temperature' y 'small_number' (convertido a i32) y almacénalo en 'result'.
         let result: i32 = temperature + small_number as i32;
+        assert_eq!(result, -15, "how can this fail? ");
 
 
         // 5. Investiga y verifica cuál es el valor mínimo que puede tener un i8.
@@ -81,7 +83,7 @@ mod tests {
 
         // 1. Declara una variable 'age' de tipo u32 con tu edad.
         let age: u32 = 25; // ¡Cambia este valor a tu edad!
-        assert!(age >= 0, "La edad no puede ser negativa.");
+        assert!(age > 0, "La edad no puede ser negativa.");
 
         // 2. Declara una variable 'max_u8' de tipo u8 con su valor máximo posible.
         // Pista: Usa la constante `MAX` asociada al tipo. u8::MAX

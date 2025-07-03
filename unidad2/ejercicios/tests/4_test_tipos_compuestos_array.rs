@@ -13,13 +13,13 @@ mod array_tests {
         let meses: [&str; 3] = ["Enero", "Febrero", "Marzo"];
 
         // 2. Accede al primer elemento del array (índice 0) y verifica su valor.
-
+        assert_eq!(meses[0], "Enero");
 
         // 3. Accede al tercer elemento y verifica que sea "Marzo".
-
+        assert_eq!(meses[2], "Marzo");
 
         // 4. Obtén la longitud del array usando el método `.len()` y verifícala.
-
+        assert_eq!(meses.len(), 3);
     }
 
     #[test]
@@ -28,15 +28,22 @@ mod array_tests {
 
         // 1. Crea un array `buffer` de 1024 bytes (u8), todos inicializados a 0.
         // La sintaxis `[valor; longitud]` es una forma conveniente de hacerlo.
+        let buffer: [u8; 1024] = [0;1024];
 
         // 2. Verifica que el primer y el último elemento sean 0.
+        assert_eq!(buffer[0], 0);
+        assert_eq!(buffer[buffer.len() - 1 ], 0);
 
 
         // 3. Verifica la longitud total del buffer.
-
+        assert_eq!(buffer.len(), 1024);
 
         // 4. Crea un array de 5 booleanos, todos inicializados a `true`.
-
+        let boolean_array: [bool;5] = [true;5];
+        
+        for bt in boolean_array {
+            assert_eq!(bt, true);
+        }
     }
 
     #[test]
